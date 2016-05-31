@@ -1,6 +1,6 @@
 # UbunTuTu - ADB for Human Beings 
 
-UbunTuTu is a graphical replacement for the adb command on Ubuntu Phone
+UbunTuTu is a graphical replacement of adb command for Ubuntu Phone
 
 ![screenshot](https://raw.githubusercontent.com/penk/UbunTuTu/master/images/screenshot.png)
 
