@@ -9,7 +9,8 @@ UbunTuTu is a graphical replacement of adb command for Ubuntu Phone
 * Get system image version 
 * Install click package
 * Grab screenshot
-* Fetch log 
+* Fetch log
+* Import & export contacts
 
 ## Build 
 
