@@ -73,10 +73,10 @@ Item {
         id: fileDialog
         title: "Please choose a contact file"
         folder: shortcuts.documents
-        selectMultiple: false
-        selectFolder: false
+        //selectMultiple: false
+        //selectFolder: false
         //selectFolder: fileDialogSelectFolder.checked
-        nameFilters: [ "Contacts file (*.vcf)" ]
+        //nameFilters: [ "Contacts file (*.vcf)" ]
         //selectedNameFilter: "All files (*)"
         selectFolder: fileDialogSelectFolder.checked
         onAccepted: {
@@ -92,8 +92,8 @@ Item {
         id: dirDialog
         title: "Please choose a directory"
         folder: shortcuts.home
-        selectMultiple: false
-        selectFolder: true
+        //selectMultiple: false
+        //selectFolder: true
         onAccepted: {
             console.log("You chose: " + fileDialog.folder)
             shell.start(applicationDirPath + '/utils/contacts.sh', [ applicationDirPath, dirDialog.folder.toString().replace(/file:\/\//, ""), "export" ])
