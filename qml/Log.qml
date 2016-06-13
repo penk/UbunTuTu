@@ -26,8 +26,7 @@ Item {
         font.pointSize: 20
     }
 
-    TextEdit {
-        id: log
+    Flickable {
         anchors {
             top: title.bottom
             left: parent.left
@@ -35,9 +34,19 @@ Item {
             bottom: parent.bottom
             margins: 30
         }
-        font.pointSize: 16
-        selectionColor: Colour.palette['Green']
-        wrapMode: TextEdit.WordWrap
-        cursorPosition: log.text.length
+        clip: true
+        contentHeight: log.contentHeight
+
+        TextEdit {
+            id: log
+            anchors {
+                margins: 30
+            }
+            width: parent.width
+            font.pointSize: 16
+            selectionColor: Colour.palette['Green']
+            wrapMode: TextEdit.WordWrap
+            cursorPosition: log.text.length
+        }
     }
 }
