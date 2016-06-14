@@ -3,6 +3,7 @@ import Process 1.0
 import "colour.js" as Colour
 
 Item {
+
     Component.onCompleted: {
         console.log('Log loaded')
         shell.start(applicationDirPath + '/utils/adb', ['shell', 'tail', '-f', '/home/phablet/.cache/upstart/scope-registry.log'])
@@ -11,6 +12,7 @@ Item {
         id: shell
         onReadyRead: {
             log.text += readAll();
+            flickable.contentY = log.contentHeight - parent.height + 100
             console.log(log.text)
         }
     }
@@ -27,6 +29,7 @@ Item {
     }
 
     Flickable {
+        id: flickable
         anchors {
             top: title.bottom
             left: parent.left
