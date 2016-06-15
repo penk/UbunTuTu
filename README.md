@@ -1,4 +1,4 @@
-# UbunTuTu - ADB for Human Beings 
+# UbunTuTu - ADB for Human Beings
 
 UbunTuTu is a graphical replacement of adb command for Ubuntu Phone
 
@@ -6,26 +6,34 @@ UbunTuTu is a graphical replacement of adb command for Ubuntu Phone
 
 ## Features
 
-* Get system image version 
+* Get system image version
 * Install click package
 * Grab screenshot
 * Fetch log
 * Import & export contacts
 
-## Build 
+## Build
 
 On Linux:
 
-    cd Process; qmake && make && make install; cd ..
-    qmake && make 
+    cd Process; qmake && make && sudo make install; cd ..
+    qmake && make
     ./UbunTuTu
 
-## Credits 
+On OS X:
 
-* `utils/convert` is a statically linked ImageMagick version 7.0.1-7 built with `png` delegate 
-* `utils/adb` is ADB version 1.0.32 from Android SDK platform tool 
+    cd Process; qmake && make && make install; cd ..
+    qmake && make
+    macdeployqt UbunTuTu.app -qmldir=qml/ -verbose=1
 
-## License 
+## Credits
+
+* `utils/mac/adb` is ADB version 1.0.32 from Android SDK platform tool
+* `utils/mac/convert` is a statically linked ImageMagick version 7.0.1-7 built with `png` delegate
+* `utils/linux/adb` is ADB version 1.0.32 from Android SDK platform tool
+* `utils/linux/convert` is a soft link to /usr/bin/convert
+
+## License
 
 Copyright © 2016 Ping-Hsun (penk) Chen <<penkia@gmail.com>>
 
