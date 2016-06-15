@@ -14,11 +14,11 @@ UbunTuTu is a graphical replacement of adb command for Ubuntu Phone
 
 ## Build 
 
-On OS X: 
+On Linux:
 
     cd Process; qmake && make && make install; cd ..
     qmake && make 
-    macdeployqt UbunTuTu.app -qmldir=qml/ -verbose=1 
+    ./UbunTuTu
 
 ## Credits 
 
